@@ -4,21 +4,19 @@ from rest_framework import status
 
 
 class ReportManager(models.Manager):
-    def create_contact(self,owner,phone_number,name):
-        if not phone_number:
-            raise ValueError('Phone number needed')
-        if not isValidPhoneNumber(phone_number):
-            raise ValueError('Invalid phone number format')
-        if not name:
-            raise ValueError('Name needed')
+    def create_report(self,owner):
+        # if not phone_number:
+        #     raise ValueError('Phone number needed')
+        # if not isValidPhoneNumber(phone_number):
+        #     raise ValueError('Invalid phone number format')
+        # if not name:
+        #     raise ValueError('Name needed')
         
-        contact=self.model(
-            owner=owner,
-            phone_number=phone_number,
-            name=name
+        report=self.model(
+            owner=owner
         )
-        contact.save(using=self._db)
-        return contact
+        report.save(using=self._db)
+        return report
     # def last_submitted_report(self):
     #     request=self.context.get('request')
     #     report=self.model.objects.filter(owner=request.user).latest()
