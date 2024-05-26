@@ -10,11 +10,9 @@ class TestName(models.TextChoices):
 
 class ReportItem(models.Model):
     report=models.ForeignKey(to=Report,on_delete=models.CASCADE)
-    unit=models.CharField(max_length=20)
     value=models.BigIntegerField()
     test_name = models.CharField(max_length=20, choices=TestName.choices, default=TestName.MALE)
     active = models.BooleanField(default=True)
-    submited=models.DateField(default=timezone.now)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 

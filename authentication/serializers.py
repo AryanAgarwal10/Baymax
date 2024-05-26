@@ -38,7 +38,7 @@ class UserLoginSerializer(serializers.ModelSerializer):
         email=user.email
         dob=user.dob
         gender=user.gender
-        lastSubmittedReport=last_submitted_report(self)
+        lastSubmittedReport=last_submitted_report(user)
         return{
             'name':name,
             'email':email,
