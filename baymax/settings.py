@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     'authentication',
+    'report',
+    'reportItem'
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -98,6 +100,8 @@ DATABASES = {
    }
 }
 AUTH_USER_MODEL= "authentication.User"
+REPORT_MODEL="report.Report"
+REPORT_ITEM_MODEL="reportItem.ReportItem"
 
 
 # Password validation
