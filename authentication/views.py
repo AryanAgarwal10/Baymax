@@ -1,3 +1,4 @@
+
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -26,3 +27,6 @@ class UserRegisterView(GenericAPIView):
                 'message':'Registration Successful'
             },status=status.HTTP_201_CREATED)
         return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+    # class UserProfileView(GenericAPIView):
+    #     def get(self,request):
+            
