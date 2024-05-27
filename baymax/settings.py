@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-2*1&@8$mc4g_&f2i0bcixt@94t(laq#+fcc)!ch#7wags=&9q5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.0.2.2']
 
 
 # Application definition
@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'authentication',
     'report',
-    'reportItem'
+    'reportItem',
+    'algo'
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [

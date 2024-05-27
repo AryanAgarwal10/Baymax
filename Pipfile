@@ -8,6 +8,8 @@ django = "*"
 psycopg2 = "*"
 djangorestframework-simplejwt = "*"
 djangorestframework = "*"
+pandas = "*"
+scikit-learn = "*"
 
 [dev-packages]
 
